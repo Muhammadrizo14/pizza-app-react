@@ -1,0 +1,25 @@
+.root {
+  position: relative;
+  input {
+    padding: 10px 41px 10px 10px;
+    width: 267px;
+    border-radius: 30px;
+    border: 1px solid rgba(40, 40, 40, 0.43);
+    &:focus {
+      border: 1px solid #282828;
+
+    }
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    opacity: 0.3;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

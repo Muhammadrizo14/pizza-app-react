@@ -1,0 +1,49 @@
+@mixin buttonPagination {
+  display: inline-block;
+  text-align: center;
+  line-height: 38px;
+  border: 1px solid #fe5f1e;
+  cursor: pointer;
+  border-radius: 60px;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    background: #fe5f1e;
+    a {
+      color: #fff;
+    }
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.pagination {
+  &__next__button {
+    @include buttonPagination;
+  }
+  &__prev__button {
+    @include buttonPagination;
+  }
+  &__container__button {
+    display: flex;
+    align-items: center;
+  }
+
+  &__active__button {
+    a {
+      color: #fff !important;
+    }
+    @include buttonPagination;
+    background: #fe5f1e !important;
+
+  }
+  &__disabled__button {
+    background: #8d8d8d;
+  }
+  &__all__page__button {
+    @include buttonPagination;
+  }
+}
